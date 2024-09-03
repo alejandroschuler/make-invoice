@@ -143,8 +143,16 @@ if __name__ == "__main__":
     month, year = get_last_month_and_year()
 
     subject = f"Invoice {year}-{month}"
-    body = "Please find the attached invoice for this month. The weekly timesheet is linked in the invoice."
-    recipients = ["alejandro.schuler@berkeley.edu"]
+    body = "Please find the attached invoice for this month. The weekly timesheet is here: https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/edit?usp=sharing."
+    recipients = [
+        "alejandro.schuler@gmail.com", 
+        "jennifer.pongonis@pme-indy.com",
+        "priyankasrinivasan@kpmg.com",
+        "cnowlin@pme-indy.com",
+        "dbahnsen@pme-indy.com",
+        "kkessel@kpmg.com",
+        "John.Scott@dhcs.ca.gov"
+    ]
 
     pdf_path = generate_invoice_md(month=month, year=year)
     send_email_with_pdf(pdf_path, subject, body, recipients)

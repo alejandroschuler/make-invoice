@@ -147,12 +147,12 @@ if __name__ == "__main__":
     body = f"Please find the attached invoice for this month. The weekly timesheet is here: {sharing_url}."
     recipients = [
         "alejandro.schuler@gmail.com", 
-        "jennifer.pongonis@pme-indy.com",
-        "priyankasrinivasan@kpmg.com",
-        "cnowlin@pme-indy.com",
-        "dbahnsen@pme-indy.com",
-        "kkessel@kpmg.com",
-        "John.Scott@dhcs.ca.gov"
+        # "jennifer.pongonis@pme-indy.com",
+        # "priyankasrinivasan@kpmg.com",
+        # "cnowlin@pme-indy.com",
+        # "dbahnsen@pme-indy.com",
+        # "kkessel@kpmg.com",
+        # "John.Scott@dhcs.ca.gov"
     ]
 
     pdf_path = generate_invoice_md(month=month, year=year)

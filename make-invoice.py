@@ -92,7 +92,7 @@ San Francisco, CA 94110
     subprocess.run(['wkhtmltopdf', '--enable-local-file-access', html_path, pdf_path])
     print(f"PDF generated: {pdf_path}")
 
-    # os.remove(md_path)
+    os.remove(md_path)
     os.remove(html_path)
 
     return pdf_path

@@ -14,12 +14,12 @@ from email.utils import formatdate
 
 # Define the public Google Sheets CSV export link
 TIMESHEET_URL = "https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/"
-sharing_url = f"{TIMESHEET_URL}edit?usp=sharing"
+HOURLY_RATE = 280
 
 # Function to generate invoice for a given month
-def generate_invoice_md(month, year, hourly_rate=280.00):
+def generate_invoice_md(month, year, hourly_rate=HOURLY_RATE, timesheet_url=TIMESHEET_URL):
     # Load the Google Sheet into a DataFrame
-    df = pd.read_csv(f'{TIMESHEET_URL}export?format=csv')
+    df = pd.read_csv(f'{timesheet_url}export?format=csv')
     
     # Convert the Date column to datetime
     df['Date'] = pd.to_datetime(df['Work Date'])
@@ -50,7 +50,7 @@ San Francisco, CA 94110
 
 **DATE**: {datetime.datetime.today().strftime("%m/%d/%y")}
 
-**[TIMESHEET LINK]({sharing_url})**
+**[TIMESHEET LINK]({f"{timesheet_url}"})**
 
 ---
 
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     month, year = get_last_month_and_year()
 
     subject = f"Invoice {year}-{month}"
-    body = f"Please find the attached invoice for this month. The weekly timesheet is here: {sharing_url}."
+    body = f"Please find the attached invoice for this month. The weekly timesheet is here: {TIMESHEET_URL}."
     recipients = [
         "alejandro.schuler@gmail.com", 
         "jennifer.pongonis@pme-indy.com",

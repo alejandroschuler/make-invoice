@@ -5,7 +5,7 @@ Uses a script + GH actions to take a google sheet of hours worked and automatica
 ## Setup
 
 1. Fork this repo.
-2. Save your timesheet in google sheets and make it publicly viewable. Edit `make-invoice.py` and set the constant `TIMESHEET` to the url of your timesheet, making sure it is formatted exactly like `https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/` and doesn't have `edit?usp=sharing` at the end. 
+2. Save your [timesheet](https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/) in the format shown in google sheets (keep column names as they are) and make it publicly viewable. Edit `make-invoice.py` and set the constant `TIMESHEET` to the url of your timesheet, making sure it is formatted exactly like `https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/` and doesn't have `edit?usp=sharing` at the end. 
 3. Create an [app password](https://support.google.com/accounts/answer/185833#zippy=%2Cwhy-you-may-need-an-app-password) for your gmail.
 4. In your github repo settings (under "secrets and variables: actions") add two repository secrets: `EMAIL_USERNAME` (your email address), and `EMAIL_PASSWORD` (the app password you created in step 3).
 

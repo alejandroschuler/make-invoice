@@ -1,13 +1,14 @@
 # Automatic Invoice Maker and Sender
 
-Uses a script + GH actions to take a google sheet of hours worked and automatically generate an invoice and send it to appropriate parties on the first of every month.
+Uses a script + GH actions to take a google sheet of hours worked and automatically generate an invoice and send it to appropriate parties on the first of every month. As long as your timesheet is up-to-date by the first of the month, this code does everything else for you.
 
 ## Setup
 
 1. Fork this repo.
-2. Save your [timesheet](https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/) in the format shown in google sheets (keep column names as they are) and make it publicly viewable. Edit `make-invoice.py` and set the constant `TIMESHEET` to the url of your timesheet, making sure it is formatted exactly like `https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/` and doesn't have `edit?usp=sharing` at the end. 
-3. Create an [app password](https://support.google.com/accounts/answer/185833#zippy=%2Cwhy-you-may-need-an-app-password) for your gmail.
-4. In your github repo settings (under "secrets and variables: actions") add two repository secrets: `EMAIL_USERNAME` (your email address), and `EMAIL_PASSWORD` (the app password you created in step 3).
+2. Save your [timesheet](https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/) in the format shown in google sheets (keep column names as they are) and make it publicly viewable. Edit `make-invoice.py` and set the constant `TIMESHEET` to the url of your timesheet, making sure it is formatted exactly like `https://docs.google.com/spreadsheets/d/1ookllAe7kdUx_05QGLUvvp1ZsJM0oVS5P6dyA1awAaE/` and doesn't have `edit?usp=sharing` at the end.
+3. [optional] Make any other changes you like to the invoice content by modifying `generate_invoice.py`.
+4. Create an [app password](https://support.google.com/accounts/answer/185833#zippy=%2Cwhy-you-may-need-an-app-password) for your gmail.
+5. In your github repo settings (under "secrets and variables: actions") add two repository secrets: `EMAIL_USERNAME` (your email address), and `EMAIL_PASSWORD` (the app password you created in step 3).
 
 ## Testing
 

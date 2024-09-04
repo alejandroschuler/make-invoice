@@ -126,17 +126,8 @@ def send_email_with_pdf(pdf_path, subject, body, recipients):
 
 
 def get_last_month_and_year():
-    # Get today's date
-    today = datetime.datetime.today()
-    
-    # Subtract one month from today's date
-    last_month_date = today - relativedelta(months=1)
-    
-    # Extract the month and year as integers
-    last_month = last_month_date.month
-    last_year = last_month_date.year
-    
-    return last_month, last_year
+    date = datetime.datetime.today() - relativedelta(months=1)
+    return date.month, date.year
 
 
 # Main entry point for the script

@@ -3,7 +3,7 @@ name: Send Monthly Invoice
 on:
   schedule:
     # - cron: '0 0 1 * *'  # Runs on the 1st of every month at midnight UTC
-    - cron: '30 0 * * *'  # test
+    - cron: '30 * * * *'  # test
   workflow_dispatch:      # This enables manual triggering
 
 

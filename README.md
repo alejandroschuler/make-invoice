@@ -11,4 +11,4 @@ Uses a script + GH actions to take a google sheet of hours worked and automatica
 
 ## Testing
 
-Click actions at the top. In the "Actions" column on the left of the resulting screen there will be a "Send Monthly Invoice" workflow. Click on that and then on the right you will see a button that says "run workflow". If you don't want to send you invoice to everyone during the testing you should first edit the relevant `recipients` variable in `make-invoice.py`.
+Click "Actions" at the top. In the "Actions" column on the left of the resulting screen there will be a "Send Monthly Invoice" workflow. Click on that and then on the right you will see a button that says "run workflow". If you don't want to send your invoice to everyone during the testing you should first edit the relevant `recipients` variable in `make-invoice.py`.

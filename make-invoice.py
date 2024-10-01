@@ -143,7 +143,9 @@ if __name__ == "__main__":
         "cnowlin@pme-indy.com",
         "dbahnsen@pme-indy.com",
         "kkessel@kpmg.com",
-        "John.Scott@dhcs.ca.gov"
+        "John.Scott@dhcs.ca.gov",
+        "gandrick@kpmg.com",
+        "hollyclark@kpmg.com",
     ]
 
     pdf_path = generate_invoice_md(month=month, year=year)

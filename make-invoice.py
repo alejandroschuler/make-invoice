@@ -139,7 +139,8 @@ if __name__ == "__main__":
     recipients = [
         "alejandro.schuler@gmail.com", 
         "Amanda.Alvey@dhcs.ca.gov",
-        "Chia.Eleje@dhcs.ca.gov"
+        "Chia.Eleje@dhcs.ca.gov",
+        "jennifer.pongonis@pme-indy.com"
     ]
 
     pdf_path = generate_invoice_md(month=month, year=year)

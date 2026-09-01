@@ -140,7 +140,8 @@ if __name__ == "__main__":
         "alejandro.schuler@gmail.com", 
         "Amanda.Alvey@dhcs.ca.gov",
         "Chia.Eleje@dhcs.ca.gov",
-        "jennifer.pongonis@pme-indy.com"
+        "jennifer.pongonis@pme-indy.com",
+        "Ian.McKeown@dhcs.ca.gov"
     ]
 
     pdf_path = generate_invoice_md(month=month, year=year)
